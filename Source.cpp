@@ -43,6 +43,40 @@ int main()
 
 //Програма яка знаходить суму всіх цілих не парних чисел у діапазоні, зазначеному користувачем.
 
+/* <iostream>
+#include <Windows.h>
+using namespace std;
+int main()
+{
+	SetConsoleCP(1251);
+	SetConsoleOutputCP(1251);
+	int a, b, i;
+	int c = 0;
+	cout << "Введіть два бажані числа через пробіл: ";
+	cin >> a >> b;
+	if (a % 2 != 0)
+	{
+		i = a;
+		do {
+			c += i;
+			i = i + 2;
+		} while (i <= b);
+	}
+	else
+	{
+		i = a + 1;
+		do {
+			c += i;
+			i = i + 2;
+		} while (i <= b);
+	}
+	cout << "Сума усіх непарних чисел = " << c;
+}*/
+
+
+
+//Дано натуральне число n. Програма обчислює факторіал невід'ємних цілих чисел n.\
+
 #include <iostream>
 #include <Windows.h>
 using namespace std;
@@ -50,23 +84,36 @@ int main()
 {
 	SetConsoleCP(1251);
 	SetConsoleOutputCP(1251);
-	int a, b, c;
-	cout << "Введіть два бажані числа через пробіл: ";
-	cin >> a >> b;
-	if (a%2!=0)
+	cout << "Введіть число n: ";
+	int n;
+	cin >> n;
+	int i = 1;
+	int fak = 1;
+	if (n > 0)
 	{
-		c = a;
-		do {
-				cout << c << endl;
-				c = c + 2;
-			} while (c <= b);
+		while (i <= n)
+		{
+			fak *= i; 
+			i++;
+		}
+		cout << "Факторіал числа " << n << " = " << fak;
+	}
+	else if (n==0)
+	{
+		cout << "Факторіал " << n << " = 1";
 	}
 	else
 	{
-		c = a + 1;
-		do {
-			cout << c << endl;
-			c = c + 2;
-		} while (c <= b);
+		cout << "Error! Incorrect number!";
 	}
 }
+
+/*#include <iostream>
+#include <Windows.h>
+using namespace std;
+int main()
+{
+	SetConsoleCP(1251);
+	SetConsoleOutputCP(1251);
+
+}*/
