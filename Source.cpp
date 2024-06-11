@@ -77,7 +77,7 @@ int main()
 
 //Дано натуральне число n. Програма обчислює факторіал невід'ємних цілих чисел n.\
 
-#include <iostream>
+/*#include <iostream>
 #include <Windows.h>
 using namespace std;
 int main()
@@ -106,14 +106,32 @@ int main()
 	{
 		cout << "Error! Incorrect number!";
 	}
-}
+}*/
 
-/*#include <iostream>
+
+
+// Швачка має тканину довжиною L. Вона має пошити подушки довжиною P. Ширина тканини = ширині подушки. 
+// Визначити скільки подушок може пошити швачка, якщо та не вміє множити і ділити. 
+// Користувач вводить довжину тканини в метрах, а довжину подушки в см.
+
+#include <iostream>
 #include <Windows.h>
 using namespace std;
 int main()
 {
 	SetConsoleCP(1251);
 	SetConsoleOutputCP(1251);
-
-}*/
+	cout << "\nВведіть довжину тканини (в метрах): ";
+	int l, p, m_sm;
+	cin >> l;
+	cout << "\nВведіть довжину подушки (в сантиметрах): ";
+	cin >> p;
+	m_sm = l * 100;
+	int num = 0;
+	while (m_sm >= p)
+	{
+		m_sm -= p;
+		num++;
+	}
+	cout << "\nЗа допомогою " << l << " метрів тканини можна зробити " << num << " подушки/подушок\n";
+}
