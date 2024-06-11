@@ -114,7 +114,7 @@ int main()
 // Визначити скільки подушок може пошити швачка, якщо та не вміє множити і ділити. 
 // Користувач вводить довжину тканини в метрах, а довжину подушки в см.
 
-#include <iostream>
+/*#include <iostream>
 #include <Windows.h>
 using namespace std;
 int main()
@@ -134,4 +134,29 @@ int main()
 		num++;
 	}
 	cout << "\nЗа допомогою " << l << " метрів тканини можна зробити " << num << " подушки/подушок\n";
+}*/
+
+
+
+//На складі N ящиків. Необхідно звільнити склад. Машини по черзі під'їжджають і 
+// забирають певну кількість ящиків. Визначити скільки машин під'їхало жо складу.
+
+#include <iostream>
+#include <Windows.h>
+using namespace std;
+int main()
+{
+	SetConsoleCP(1251);
+	SetConsoleOutputCP(1251);
+	cout << "\nВведіть кількість ящиків з яблуками: ";
+	int n;
+	cin >> n;
+	const int cap = 60;
+	int num = 0;
+	while (n > 0)
+	{
+		num++;
+		n -= cap;
+	}
+	cout << "Потрібно " << num << " машин.";
 }
