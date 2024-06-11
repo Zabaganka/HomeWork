@@ -1,3 +1,7 @@
+//Програма яка виводить на екран горизонтальну лінію із символів. Кількість символів, який 
+// використовуватиметься символ, і яка буде лінія - горизонтальна чи вертикальна - обирає користувач. 
+
+
 /*#include <iostream>
 #include <Windows.h>
 using namespace std;
@@ -36,3 +40,33 @@ int main()
 	}
 }*/
 
+
+//Програма яка знаходить суму всіх цілих не парних чисел у діапазоні, зазначеному користувачем.
+
+#include <iostream>
+#include <Windows.h>
+using namespace std;
+int main()
+{
+	SetConsoleCP(1251);
+	SetConsoleOutputCP(1251);
+	int a, b, c;
+	cout << "Введіть два бажані числа через пробіл: ";
+	cin >> a >> b;
+	if (a%2!=0)
+	{
+		c = a;
+		do {
+				cout << c << endl;
+				c = c + 2;
+			} while (c <= b);
+	}
+	else
+	{
+		c = a + 1;
+		do {
+			cout << c << endl;
+			c = c + 2;
+		} while (c <= b);
+	}
+}
