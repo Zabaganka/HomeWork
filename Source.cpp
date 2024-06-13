@@ -93,7 +93,7 @@ int main()
 	{
 		while (i <= n)
 		{
-			fak *= i; 
+			fak *= i;
 			i++;
 		}
 		cout << "Факторіал числа " << n << " = " << fak;
@@ -139,9 +139,9 @@ int main()
 
 
 //На складі N ящиків. Необхідно звільнити склад. Машини по черзі під'їжджають і 
-// забирають певну кількість ящиків. Визначити скільки машин під'їхало жо складу.
+// забирають 60 ящиків. Визначити скільки машин під'їхало жо складу.
 
-#include <iostream>
+/*#include <iostream>
 #include <Windows.h>
 using namespace std;
 int main()
@@ -159,4 +159,122 @@ int main()
 		n -= cap;
 	}
 	cout << "Потрібно " << num << " машин.";
-}
+};*/
+
+
+
+// Користувач вводить число більше за нуль. Необхідно вивести всі його цифри починаючи з кінця.
+
+/*#include <iostream>
+#include <Windows.h>
+using namespace std;
+int main()
+{
+	SetConsoleCP(1251);
+	SetConsoleOutputCP(1251);
+	cout << "Введіть число (>0): ";
+	int num;
+	cin >> num;
+	if (num < 0)
+	{
+		cout << "\nЧисло не коректне!";
+	}
+	else
+	{
+		for (int i = num; i > 0; i /= 10)
+		{
+			num = i % 10;
+			cout << num;
+		}
+	}
+}*/
+
+
+
+// У перший день равлик проповз 15 см. Кожен наступний день він проповзав на 2 см далі.
+//Визначити яку загальну відстань проповзе равлик за n днів.
+
+/*#include <iostream>
+#include <Windows.h>
+using namespace std;
+int main()
+{
+	SetConsoleCP(1251);
+	SetConsoleOutputCP(1251);
+	cout << "Введіть кількість днів: ";
+	int day;
+	cin >> day;
+	int num = 0;
+	int sum = 0;
+	for (int sm = 15; num < day; sm += 2)
+	{
+		sum += sm;
+		num++;
+	}
+	cout << "Равлик за " << day << " проповз " << sum << " сантиметрів.";
+}*/
+
+
+
+//Користувач вводить з клавіатури число, необхідно показати суму його цифр на екран.
+
+/*#include <iostream>
+#include <Windows.h>
+using namespace std;
+int main()
+{
+	SetConsoleCP(1251);
+	SetConsoleOutputCP(1251);
+	cout << "Введіть число: ";
+	int num;
+	cin >> num;
+	int sum = 0;
+	for (int i = num; i > 0; i /= 10)
+	{
+		num = i % 10;
+		sum += num;
+	}
+	cout << "Сума усіх цифр = " << sum;
+}*/
+
+
+//Для прийняття рішення студент підкидає монету 9 разів. Якщо в результаті кількіть монет,
+// що випали стороною "орел", буде  парною, він приймає рішення в позитивну сторону, 
+// інакше - в негативну. Програма запитує 9 разів число, 1 або 0 (орел/решка) і видає
+// відповідний результат розв'язання проблеми студента.
+
+/*#include <iostream>
+#include <Windows.h>
+using namespace std;
+int main()
+{
+	SetConsoleCP(1251);
+	SetConsoleOutputCP(1251);
+	int num = 0;
+	int answer;
+	int orel;
+	for (orel = 0; num < 9; num++)
+	{
+		cout << "Введіть число 1(орел), або 0(решка): ";
+		cin >> answer;
+		if (answer == 1)
+		{
+			orel += answer;
+		}
+		else
+		{
+			continue;
+		}
+	}
+	if (orel % 2 == 0)
+	{
+		cout << "\nПриймай рішення в позитивну сторону!";
+	}
+	else
+	{
+		cout << "\nПриймай рішення в негативну сторону!";
+	}
+}*/
+
+
+
