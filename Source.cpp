@@ -329,24 +329,81 @@ int main()
 //A = 10, B = 15.
 
 
-#include <iostream>
-#include <Windows.h>
-using namespace std;
-int main()
-{
-	SetConsoleCP(1251);
-	SetConsoleOutputCP(1251);
-	cout << "Введіть число А та число В через пробіл: ";
-	int a,b;
-	cin >> a >> b;
-	for (int i = 0; a <= b; a++)
-	{
-		cout << "\nДільники числа " << a << " - ";
-		for (int dil = 1; dil <= a; dil++)
-		{
-			if (a % dil == 0)
-				cout << " " << dil;
-		}
-		cout << ";\n";
-	}
-}
+//#include <iostream>
+//#include <Windows.h>
+//using namespace std;
+//int main()
+//{
+//	SetConsoleCP(1251);
+//	SetConsoleOutputCP(1251);
+//	cout << "Введіть число А та число В через пробіл: ";
+//	int a,b;
+//	cin >> a >> b;
+//	for (int i = 0; a <= b; a++)
+//	{
+//		cout << "\nДільники числа " << a << " - ";
+//		for (int dil = 1; dil <= a; dil++)
+//		{
+//			if (a % dil == 0)
+//				cout << " " << dil;
+//		}
+//		cout << ";\n";
+//	}
+//}
+
+
+//Створити програму, яка виводить на екран прості числа в діапазоні від 2 до 1000.
+
+//#include <iostream>
+//#include <Windows.h>
+//using namespace std;
+//int main()
+//{
+//	SetConsoleCP(1251);
+//	SetConsoleOutputCP(1251);
+//	cout << "Прості числа: ";
+//	for (int i = 3; i <= 1000; i++)
+//	{
+//		bool flag = true;
+//		for (int j = 2; j < i; j++)
+//		{
+//			if (i % j == 0)
+//			{
+//				flag = false;
+//				break;
+//			}
+//		}
+//		if (flag)
+//		{
+//			cout << i << ", ";
+//		}
+//	}
+//}
+
+
+//Написати програму, яка виводить на екран сніжинку з "*".
+
+//#include <iostream>
+//#include <Windows.h>
+//using namespace std;
+//int main()
+//{
+//	SetConsoleCP(1251);
+//	SetConsoleOutputCP(1251);
+//	cout << "Введіть непарне число: ";
+//	int n;
+//	cin >> n;
+//	for (int i = 0; i < n; i++)
+//	{
+//		for (int j = 0; j < n; j++)
+//		{
+//			if (i == j||i+j==n-1||j==n/2||i==n/2)
+//				cout << "*";
+//			else
+//			{
+//				cout << " ";
+//			}
+//		}
+//		cout << endl;
+//	}
+//}
