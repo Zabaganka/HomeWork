@@ -324,3 +324,29 @@ int main()
 
 
 
+//Написати програму, яка для чисел у діапазоні від A
+//до B визначала кількість їхніх дільників.Наприклад,
+//A = 10, B = 15.
+
+
+#include <iostream>
+#include <Windows.h>
+using namespace std;
+int main()
+{
+	SetConsoleCP(1251);
+	SetConsoleOutputCP(1251);
+	cout << "Введіть число А та число В через пробіл: ";
+	int a,b;
+	cin >> a >> b;
+	for (int i = 0; a <= b; a++)
+	{
+		cout << "\nДільники числа " << a << " - ";
+		for (int dil = 1; dil <= a; dil++)
+		{
+			if (a % dil == 0)
+				cout << " " << dil;
+		}
+		cout << ";\n";
+	}
+}
