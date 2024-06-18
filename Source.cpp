@@ -278,3 +278,49 @@ int main()
 
 
 
+//¬ивести на дисплей календар на обраний м≥с€ць з урахуванн€м 
+// зазначеного номера дн€ тижн€ дл€ початку м≥с€ц€.
+
+/*#include <iostream>
+#include <Windows.h>
+using namespace std;
+int main()
+{
+	SetConsoleCP(1251);
+	SetConsoleOutputCP(1251);
+	cout << "¬ибер≥ть м≥с€ць (число 1-12): ";
+	int mounth;
+	cin >> mounth;
+	cout << "¬вед≥ть з €кого дн€ тижн€ починатиметьс€ м≥с€ць (1-7): ";
+	int day;
+	cin >> day;
+	cout << "Mo\tTu\tWe\tTh\tFr\tSa\tSu\n";
+	for (int num = 0; num < day-1; num++)
+	{
+		cout << "_\t";
+	}
+	if (mounth == 1 || mounth == 3 || mounth == 5 || mounth == 7 || mounth == 8 || mounth == 10 || mounth == 12)
+	{
+		for (int num = 1; num < 32; num++)
+		{
+			cout << num << "\t";
+		}
+	}
+	else if (mounth == 4 || mounth == 6 || mounth == 9 || mounth == 11)
+	{
+		for (int num = 1; num < 31; num++)
+		{
+			cout << num << "\t";
+		}
+	}
+	else
+	{
+		for (int num = 1; num < 29; num++)
+		{
+			cout << num << "\t";
+		}
+	}
+}*/
+
+
+
