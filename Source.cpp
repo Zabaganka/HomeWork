@@ -451,6 +451,29 @@ int main()
 // Квітень і Май. Необхідно визначити : виплату по кожному співробітнику за квартал; загальну 
 // виплату по всім співробітникам за квартал.
 
+//#include <iostream>
+//#include <Windows.h>
+//using namespace std;
+//int main()
+//{
+//	SetConsoleCP(1251);
+//	SetConsoleOutputCP(1251);
+//	int sum = 0, march = 0, april = 0, may = 0, zag_sum = 0;
+//	for (int i = 1; i < 13; i++)
+//	{
+//		cout << "\nВведіть зарплату співробітника " << i << " за березень, квітень та травень через пробіл: ";
+//		cin >> march >> april >> may;
+//		sum = march + april + may;
+//		zag_sum += sum;
+//		cout << "\nЗарплата співробітника " << i << " за квартал = " << sum;
+//	}
+//	cout << "\nЗагальна зарплата співробітників за квартал = " << zag_sum;
+//}
+
+
+
+//Програма, яка визначає перший додатній та від'ємний елемент масиву.
+
 #include <iostream>
 #include <Windows.h>
 using namespace std;
@@ -458,14 +481,26 @@ int main()
 {
 	SetConsoleCP(1251);
 	SetConsoleOutputCP(1251);
-	int sum = 0, march = 0, april = 0, may = 0, zag_sum = 0;
-	for (int i = 1; i < 13; i++)
+	const int size = 8;
+	double arr[size] = { -5.7,6.0,2.0,0.0,-4.7,6.0,8.1,-4.0 };
+	double positive = 0;
+	for (int i = size-1; i >= 0; i--)
 	{
-		cout << "\nВведіть зарплату співробітника " << i << " за березень, квітень та травень через пробіл: ";
-		cin >> march >> april >> may;
-		sum = march + april + may;
-		zag_sum += sum;
-		cout << "\nЗарплата співробітника " << i << " за квартал = " << sum;
+		if (arr[i] > 0)
+		{
+			positive = arr[i];
+			break;
+		}
 	}
-	cout << "\nЗагальна зарплата співробітників за квартал = " << zag_sum;
+	double negative = 0;
+	for (int i = 0; i < size; i++)
+	{
+		if (arr[i] < 0)
+		{
+			negative = arr[i];
+			break;
+		}
+	}
+	cout << "Останнє додатнє число : " << positive << endl;
+	cout << "Перше від'ємне число: " << negative << endl;
 }
