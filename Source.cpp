@@ -472,7 +472,43 @@ int main()
 
 
 
-//Програма, яка визначає перший додатній та від'ємний елемент масиву.
+//Програма, яка визначає останній додатній та перший від'ємний елемент масиву.
+
+//#include <iostream>
+//#include <Windows.h>
+//using namespace std;
+//int main()
+//{
+//	SetConsoleCP(1251);
+//	SetConsoleOutputCP(1251);
+//	const int size = 8;
+//	double arr[size] = { -5.7,6.0,2.0,0.0,-4.7,6.0,8.1,-4.0 };
+//	double positive = 0;
+//	for (int i = size-1; i >= 0; i--)
+//	{
+//		if (arr[i] > 0)
+//		{
+//			positive = arr[i];
+//			break;
+//		}
+//	}
+//	double negative = 0;
+//	for (int i = 0; i < size; i++)
+//	{
+//		if (arr[i] < 0)
+//		{
+//			negative = arr[i];
+//			break;
+//		}
+//	}
+//	cout << "Останнє додатнє число : " << positive << endl;
+//	cout << "Перше від'ємне число: " << negative << endl;
+//}
+
+
+
+//у масиві інформація про мешканців кожної квартири 5 поверхового будинку (4 під'їзди, по 2 квартири)
+//виконання з цими даними різних операцій.
 
 #include <iostream>
 #include <Windows.h>
@@ -481,26 +517,65 @@ int main()
 {
 	SetConsoleCP(1251);
 	SetConsoleOutputCP(1251);
-	const int size = 8;
-	double arr[size] = { -5.7,6.0,2.0,0.0,-4.7,6.0,8.1,-4.0 };
-	double positive = 0;
-	for (int i = size-1; i >= 0; i--)
+	const int n = 40;
+	int flat[40];
+	for (int i = 0; i < n; i++)
 	{
-		if (arr[i] > 0)
+		cout << "\nВведіть кількість жителів у " << i++ << " квартирі";
+		cin >> flat[i];
+	}
+	cout << "\nВведіть яку саме операцію ви бажаєте здійснити?";
+	cout << "\n1 - За обраним номером квартири визначити кількість мешканців, \n"
+		"а також їхніх сусідів, які проживають на одному поверсі.";
+	cout << "\n2 - Визначити сумарну кількість мешканців для кожного під'їзду";
+	cout << "\n3 - Визначити номери квартир де мешкають багатодітні сім'ї";
+	int num;
+	cin >> num;
+	switch (num)
+	{
+	default:
+	{
+		cout << "\nНекоректний ввід";
+		break;
+	}
+	case 1:
+	{
+		cout << "\nВведіть номер квартири: ";
+		int num_flat;
+		cin >> num_flat;
+		cout << "\nУ квартирі номер " << num_flat << " проживає " << flat[num_flat - 1]<<" осіб.";
+		if (num_flat % 2 == 0)
 		{
-			positive = arr[i];
+			cout << "\nУ сусідній квартирі номер " << num_flat - 1 << " проживає " << flat[num_flat - 2] << " осіб.";
+		}
+		else
+		{
+			cout << "\nУ сусідній квартирі номер " << num_flat + 1 << " проживає " << flat[num_flat] << " осіб.";
+		}
+		break;
+	} 
+	case 2:
+	{
+		cout << "\nВведіть номер під'їзду: ";
+		int num_entr;
+		cin >> num_entr;
+		switch (num_entr)
+		{
+		default:
+		{
+			cout << "\nЧисло некоректне!";
 			break;
 		}
-	}
-	double negative = 0;
-	for (int i = 0; i < size; i++)
-	{
-		if (arr[i] < 0)
+		case 1:
 		{
-			negative = arr[i];
-			break;
+			for(int i = )
 		}
+		}
+		break;
 	}
-	cout << "Останнє додатнє число : " << positive << endl;
-	cout << "Перше від'ємне число: " << negative << endl;
+	case 3:
+	{
+
+	}
+	}
 }
